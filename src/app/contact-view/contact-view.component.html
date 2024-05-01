@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <ng-container *ngIf="contact$ | async as contact">
+      <mat-card-title>Contact details of {{ contact.firstName }} {{ contact.lastName }}</mat-card-title>
+    </ng-container>
+  </mat-card-header>
+  <mat-card-content>
+    <ng-container *ngIf="contact$ | async as contact">
+      <p>Phone: {{ contact.phone }}</p>
+      <p> Address: {{ contact.address }} </p>
+      <p> Email: {{ contact.email }} </p>
+    </ng-container>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="btn-edit" (click)="editContact()" mat-flat-button color="primary">EDIT</button>
+  </mat-card-actions>
+</mat-card>
