@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren, AfterViewInit } from '@angular/core';
 import { ContactsService } from '../contacts.service';
 import { of, switchMap, tap } from 'rxjs';
 import { Contact } from '../models/contact.model';
@@ -36,7 +36,7 @@ import { LocalStorageService } from '../local-storage.service';
   templateUrl: './contacts-list.component.html',
   styleUrl: './contacts-list.component.scss'
 })
-export class ContactsListComponent implements OnInit {
+export class ContactsListComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChildren(MatMenu) matMenu: MatMenu;

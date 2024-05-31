@@ -1,5 +1,4 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
-import { max } from 'rxjs';
 
 export function dobValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -14,7 +13,7 @@ export function dobValidator(): ValidatorFn {
     const maxAgeDate = new Date();
     maxAgeDate.setFullYear(maxAgeDate.getFullYear() - 150);
     if (userDate < maxAgeDate) {
-        return { maxAge: true };
+      return { maxAge: true };
     }
 
     return null;

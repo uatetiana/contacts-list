@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+pros:
+
+- custom validators;
+- UX: modals, flows are good;
+- material usage;
+- RxJS usage;
+  cons:
+- CRUD methods located in local-storage-service;
+- initial data is set into local-storage in service constructor - which leads to reset of data on each reload (all changes erased);
+- href navigation, SPA doesn't work;
+- unused injections, imports;
+- old syntax for angular 17;
+- edit on 'detail' page doesn't save changes;
+- useless 'onSubmit()' in the form dialog component;
+- unused code (for intstance: contact in Contact-view.components etc.);
+- RxJS - is used a lot, but frequently mixed with simple synchronous code with workarounds of wrapping it on the spot with of() etc.;
+- missed return types.

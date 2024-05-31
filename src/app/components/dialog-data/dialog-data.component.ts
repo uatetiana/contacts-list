@@ -16,9 +16,8 @@ import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { dobValidator } from '../../validators/dob-validator';
 import { CommonModule } from '@angular/common';
-import { phoneNumberValidator } from '../../validators/phone-validator';
 
-export interface DialogData extends Contact {}
+export interface DialogData extends Contact { }
 
 @Component({
   selector: 'app-dialog-data',
@@ -50,8 +49,8 @@ export class DialogDataComponent implements OnInit {
   }
 
   constructor(
-    public dialogRef: MatDialogRef<DialogDataComponent>, 
-    @Optional() @Inject(MAT_DIALOG_DATA) public data: DialogData, 
+    public dialogRef: MatDialogRef<DialogDataComponent>,
+    @Optional() @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private fb: FormBuilder
   ) { }
 
@@ -76,7 +75,7 @@ export class DialogDataComponent implements OnInit {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      const newContact = this.contactForm.value;
+      //  const newContact = this.contactForm.value;
     }
   }
 
