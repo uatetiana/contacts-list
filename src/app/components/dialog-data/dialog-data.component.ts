@@ -73,12 +73,6 @@ export class DialogDataComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    if (this.contactForm.valid) {
-      //  const newContact = this.contactForm.value;
-    }
-  }
-
   onCancelClick(): void {
     this.dialogRef.close();
   }
